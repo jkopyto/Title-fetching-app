@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+  
+<html> 
+<head> 
+    <title>Article titles from gornik.tbg</title> 
+</head> 
+<body> 
+<h1>Page number: {{pg_num}}</h1>
+<ol> 
+<!-- For loop logic of jinja template -->
+{%for i in range(0, len)%} 
+  
+    <li>{{Titles[i]}}</li> 
+{%endfor%} 
+  
+</ol> 
+ <button type="button" onclick="window.location.href='{{ url_for('titles', page_num=pg_num+1)}}';">Next Page</button>
+</body> 
+</html> 
